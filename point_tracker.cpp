@@ -17,16 +17,16 @@ class PointTracker {
             cout << "      Point Tracker Application        \n";
             cout << "----------------------------------------\n";
             cout << "This application tracks participant uniquenames against a master list.\n";
-            cout << "Please ensure swe_uniquenames.txt is in the same directory and is up to date.\n";
+            cout << "Please ensure member_uniquenames.txt is in the same directory and is up to date.\n";
             cout << "If you are ready to continue, please press Enter...\n";
             cin.get();
         }
 
         void input_uniquenames() {
-            cout << "\nReading SWE uniquenames from file...\n";
-            ifstream infile("swe_uniquenames.txt");
+            cout << "\nReading member uniquenames from file...\n";
+            ifstream infile("member_uniquenames.txt");
             if (!infile.is_open()) {
-                cerr << "Error opening swe_uniquenames.txt\n";
+                cerr << "Error opening member_uniquenames.txt\n";
                 return;
             }
             string uniquename;
